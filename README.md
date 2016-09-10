@@ -15,6 +15,9 @@ TO validate email address (dig, telnet):
   
 		MAIL FROM: mail@domain.ext
   5. send rcpt with the needed mail address
+  		
+  		```sh
 		RCPT TO: mail@otherdomain.ext
+		```
 
   6. handle response
