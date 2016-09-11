@@ -22,11 +22,11 @@ def ver_email():
     if match == None:
     	return jsonify({'result': 'Faild'})
 
-    # get The dns information
-    # 1- get the domain, usually after '@'
-    # 2- dig domain mx, will return the list of mx records
-    # 3- get the first mx record 
-    # 4- if lookup for mx return with error, return Faild
+        # get The dns information
+        # 1- get the domain, usually after '@'
+        # 2- dig domain mx, will return the list of mx records
+        # 3- get the first mx record 
+        # 4- if lookup for mx return with error, return Faild
     splitAddress = addressToVerify.split('@')
     domain = str(splitAddress[1])
     print('Domain:', domain)
@@ -46,13 +46,13 @@ def ver_email():
     if len(records)==0:
         return jsonify({'result': 'Faild'})
 
-    # 1- inti new smtp client 
-    # 2- set debug level to 0 to get full output 
-    # 3- connect to mx record host address 
-    # 4- send helo or ehlo to start communcation with smtp server 
-    # 5- send mail from to mimitat send new email proccess
-    # 6- send recipient addresses to check if it known to the mail server
-    # 7- send quit to smtp to close connection the smtp server 
+        # 1- inti new smtp client 
+        # 2- set debug level to 0 to get full output 
+        # 3- connect to mx record host address 
+        # 4- send helo or ehlo to start communcation with smtp server 
+        # 5- send mail from to mimitat send new email proccess
+        # 6- send recipient addresses to check if it known to the mail server
+        # 7- send quit to smtp to close connection the smtp server 
     
     try:
         mxRecord = records[0].exchange
