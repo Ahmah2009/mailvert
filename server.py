@@ -14,7 +14,7 @@ app = Flask(__name__)
 def ver_email():
     email= request.args.get('email')
     print email
-    fromAddress = 'we@la.com'
+    fromAddress = 'io@shere.com'
     addressToVerify = str(email)
     # check email syntax using regex
     regex = '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$'
