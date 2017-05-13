@@ -34,13 +34,10 @@ def ver_email():
     try:
         records = dns.resolver.query(domain, 'MX')
     except dns.resolver.NXDOMAIN:
-        print "No such domain"
         return jsonify({'result': 'Faild'})
     except dns.resolver.Timeout:
-        print "Timed out while resolving"
         return jsonify({'result': 'Faild'})
     except dns.exception.DNSException:
-        print "Unhandled exception"
         return jsonify({'result': 'Faild'})
 
     if len(records)==0:
@@ -69,10 +66,8 @@ def ver_email():
         code=-1 
 
     if code == 250:
-    	print('Success')
         return jsonify({'result': 'Success'})
     else:
-    	print('Bad')
         return jsonify({'result': 'Faild'})
 
 if __name__ == '__main__':
