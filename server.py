@@ -9,7 +9,7 @@ import dns.resolver
 app = Flask(__name__)
 
 
-@app.route('/v1/', methods=['GET'])
+@app.route('/', methods=['GET'])
 
 def ver_email():
     email= request.args.get('email')
