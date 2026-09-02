@@ -1,0 +1,9 @@
+services:
+  mailvert:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MAILVERT_SMTP_PROBE_ENABLED: "true"
+      MAILVERT_RATE_LIMIT: "30/minute"
+      MAILVERT_LOG_JSON: "true"
